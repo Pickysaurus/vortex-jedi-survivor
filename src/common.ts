@@ -1,11 +1,11 @@
 import path from 'path';
 
 // Game Constants
-const STEAMAPP_ID = '1172380';
-const ORIGINAPP_ID = 'Origin.OFR.50.0003795';
-const EPICAPP_ID = 'Shoebill';
-const NEXUSMODS_ID = 'starwarsjedifallenorder';
-const EXE_PATH = path.join('SwGame', 'Binaries', 'Win64', 'starwarsjedifallenorder.exe')
+const STEAMAPP_ID = '1774580';
+const ORIGINAPP_ID = 'Origin.SFT.50.0001331';
+const EPICAPP_ID = '';
+const NEXUSMODS_ID = 'starwarsjedisurvivor';
+const EXE_PATH = path.join('SwGame', 'Binaries', 'Win64', 'jedisurvivor.exe')
 
 // Modding Constants
 const MOD_FILE_EXT = ".pak";

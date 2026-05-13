@@ -1,7 +1,7 @@
 import { fs, types, util } from 'vortex-api';
 import { EPICAPP_ID, EXE_PATH, MOD_FOLDER, NEXUSMODS_ID, ORIGINAPP_ID, STEAMAPP_ID } from './common';
-import installer from './installer-starwarsjedi-mod';
-import modtype from './modtype-starwarsjedi-pak-modtype';
+import installer from './installer-starwarsjedi2-mod';
+import modtype from './modtype-starwarsjedi2-pak-modtype';
 import loadorder from './loadorder';
 
 function main(context: types.IExtensionContext) {
@@ -10,7 +10,7 @@ function main(context: types.IExtensionContext) {
 
     context.registerGame({
         id: NEXUSMODS_ID,
-        name: 'Star Wars Jedi: Fallen Order',
+        name: 'Star Wars Jedi: Survivor',
         mergeMods: true,
         queryPath: util.toBlue(findGame),
         requiresCleanup: true,
@@ -26,19 +26,20 @@ function main(context: types.IExtensionContext) {
         },
         details: {
             steamAppId: STEAMAPP_ID,
-            customOpenModsPath: MOD_FOLDER
+            customOpenModsPath: MOD_FOLDER,
+            supportsSymlinks: false,
         }
     });
 
     context.registerInstaller(
-        'starwarsjedi-mod', 
+        'starwarsjedi2-mod', 
         25, 
         installer.test, 
         (files) => installer.install(context.api, files)
     );
 
     context.registerModType(
-        'starwarsjedi-pak-modtype', 
+        'starwarsjedi2-pak-modtype', 
         25,
         (gameId) => gameId === NEXUSMODS_ID,
         () => modtype.getPath(context.api),

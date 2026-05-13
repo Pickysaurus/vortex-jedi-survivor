@@ -64,7 +64,7 @@ function callback(api: types.IExtensionApi, loadOrder: any) {
 }
 
 function filter(mods: types.IMod[]) {
-    return mods.filter(mod => mod.type === 'starwarsjedi-pak-modtype')
+    return mods.filter(mod => mod.type === 'starwarsjedi2-pak-modtype')
 }
 
 export default { preSort, createPrefix, callback, infoPanel: LoadOrderPanel, filter };
