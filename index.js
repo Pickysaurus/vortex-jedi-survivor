@@ -124,7 +124,7 @@ function testPakModType(instructions) {
 
 function main(context) {
 
-  context.requireVersion('^1.2.0');
+  context.requireVersion('>=1.2.0');
 
   context.registerGame({
     id: STARWARS_ID,
