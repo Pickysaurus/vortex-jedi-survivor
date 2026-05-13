@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "rootDir": "./src",
+    "outDir": "./out",
+    "jsx": "react",
+    "sourceMap": false,
+    "types": ["node"]
+  },
+    "exclude": [
+      "node_modules"
+    ],
+  "files": [
+    "src/index.ts"
+  ]
+}
